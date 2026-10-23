@@ -5,8 +5,7 @@ function getRandomIndex(arr: any[]): number {
 }
 
 export function getRandomWord(): string {
-  const randomIndex: number = getRandomIndex(words);
-  return words[randomIndex];
+  return words[getRandomIndex(words)];
 }
 
 export function getFarewellText(language: string): string {
@@ -25,6 +24,5 @@ export function getFarewellText(language: string): string {
     `${language} has left the building`,
   ];
 
-  const randomIndex: number = getRandomIndex(options);
-  return options[randomIndex];
+  return options[getRandomIndex(options)];
 }
